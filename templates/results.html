@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="nav">
+                <div id="navContent">
+                    <h1>The Results!</h1>
+                </div>
+            </div>
+            <div id="mainContent" class="resultsText">
+                Name: {{session["name"]}} <br><br>
+                Location: {{session["location"]}} <br><br>
+                Language: {{session["language"]}} <br><br>
+                Comments: {{session["comments"]}} <br><br>
+                <a href="/clear">Clear Survey</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

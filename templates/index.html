@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="nav">
+                <div id="navContent">
+                    <h1>Dojo Survey</h1>
+                </div>
+            </div>
+            <div id="mainContent">
+                <form action="/survey" method="POST">
+                    <label for="name">Name:</label><br>
+                    <input class="box" type="text" name="name" id="name" placeholder="Name">
+                    <br><br>
+                    <label for="">Location:</label><br>
+                    <select class="box" name="location">
+                        <option hidden selected disabled>--Select Location--</option>
+                        <option>Online</option>
+                        <option>Seattle</option>
+                        <option>Chicago</option>
+                        <option>New York</option>
+                    </select>
+                    <br><br>
+                    <label for="">Language:</label><br>
+                    <select class="box" name="language">
+                        <option hidden selected disabled>--Select Language--</option>
+                        <option>Python</option>
+                        <option>JavaScript</option>
+                        <option>Java</option>
+                        <option>C#</option>
+                    </select>
+                    <br><br>
+                    <label for="comments">Comments:</label><br>
+                    <textarea class="box"type="textarea" name="comments" placeholder="Comments"></textarea>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
